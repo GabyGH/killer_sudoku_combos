@@ -56,7 +56,7 @@ fn main() {
 mod tests {
     use super::*;
 
-    # Verifies that the function returns all valid pairs of numbers that sum to 10. 
+    // Verifies that the function returns all valid pairs of numbers that sum to 10. 
     #[test]
     fn test_two_numbers_sum_to_10() {
         let expected = vec![
@@ -69,7 +69,7 @@ mod tests {
         assert_eq!(result, expected);
     }
 
-    # Verifies that the function correctly handles 3 numbers summing to 15.
+    // Verifies that the function correctly handles 3 numbers summing to 15.
     #[test]
     fn test_three_numbers_sum_to_15() {
         let expected = vec![
@@ -86,7 +86,7 @@ mod tests {
         assert_eq!(result, expected);
     }
 
-    # Tests the edge case where only 1 number is required.
+    // Tests the edge case where only 1 number is required.
     #[test]
     fn test_one_number_sum_to_5() {
         let expected = vec![vec![5]];
@@ -94,21 +94,21 @@ mod tests {
         assert_eq!(result, expected);
     }
 
-    # Verifies that the function returns no combinations when the sum is too large for the possible numbers.
+    // Verifies that the function returns no combinations when the sum is too large for the possible numbers.
     #[test]
     fn test_no_valid_combinations_large_sum() {
         let result = find_combinations(2, 20);
         assert!(result.is_empty());
     }
 
-    # Checks that the function correctly handles cases where the number of cells and the sum are incompatible.
+    // Checks that the function correctly handles cases where the number of cells and the sum are incompatible.
     #[test]
     fn test_no_valid_combinations_too_many_numbers() {
         let result = find_combinations(5, 50); // 5 numbers summing to 50 is impossible
         assert!(result.is_empty());
     }
 
-    # Tests the minimal valid combination (smallest sum of 2 distinct numbers).
+    // Tests the minimal valid combination (smallest sum of 2 distinct numbers).
     #[test]
     fn test_minimal_sum_with_two_numbers() {
         let expected = vec![vec![1, 2]]; // Smallest valid combination
